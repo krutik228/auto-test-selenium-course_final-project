@@ -39,6 +39,7 @@ def browser(request):
     else:
         #  Выброс ошибки при неуказании или указании неверного параметра выбора браузера
         raise pytest.UsageError("--browser_name should be chrome or firefox")
+    browser.implicitly_wait(5)
     yield browser
     print("\nquit browser..")
     browser.quit()
