@@ -5,7 +5,7 @@ from pages.locators import BasketPageLocators
 
 
 def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
-    link = "http://selenium1py.pythonanywhere.com/ru/catalogue/"
+    link = "http://selenium1py.pythonanywhere.com/catalogue/"
     page = MainPage(browser, link)
     page.open()
     page.go_to_basket()

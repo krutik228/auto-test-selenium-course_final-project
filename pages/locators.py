@@ -24,8 +24,6 @@ class ProductPageLocators:
     TITTLE_OF_THE_PRODUCT = (By.CSS_SELECTOR, ".col-sm-6.product_main>h1")
     PRICE_OF_THE_PRODUCT = (By.CSS_SELECTOR, ".col-sm-6.product_main>.price_color")
     NOTIFICATION_OF_ADDING_A_PRODUCT_TO_BASKET = (By.CSS_SELECTOR, ":nth-child(1).alert")
-    NOTIFICATION_EMPTY_BASKET = (By.CSS_SELECTOR, ".content")
-    TEXT_EMPTY_BASKET_IN_NOTIFICATION = (By.CSS_SELECTOR, "#content_inner p")
 
 
 class BasePageLocators:
