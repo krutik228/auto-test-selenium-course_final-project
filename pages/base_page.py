@@ -60,7 +60,6 @@ class BasePage:
                 until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return False
-
         return True
 
     def go_to_login_page(self):
@@ -68,4 +67,15 @@ class BasePage:
         link.click()
 
     def should_be_login_link(self):
-        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Ссылка на логин отсутствует"
+
+    def go_to_basket(self):
+        link = self.browser.find_element(*BasePageLocators.BUTTON_VIEW_BASKET)
+        link.click()
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
+
+    def go_to(self, url):
+        self.browser.get(url)
